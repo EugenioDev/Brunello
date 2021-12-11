@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+}
+
+/* Home page Section */
+.home {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+.home-section__left {
+  width: 50%;
+  padding: 10px 0 0 20px;
+  height: 100%;
+}
+.home-section__left .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.home-section__left .logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+.home-section__left h3 {
+  font-size: 25px;
+}
+.home-section__left span {
+  color: #03a9cd;
+}
+
+.home-section-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+}
+
+.home-section-text h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+.home-section-text p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.home-section-text span {
+  color: #03a9cd;
+  font-weight: 700;
+}
+/* Section Right */
+.home-section__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  background-image: url("./images/paper-texture.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.home-section-form {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 50%;
+}
+.home-section-form.hidden {
+  display: none;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.form-control img {
+  width: 15px;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.form-control label {
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: #03a9cd;
+}
+.form-control input {
+  padding: 5px 10px;
+  margin: 8px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #eee;
+}
+
+.form-control button {
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  background-color: #03a9cd;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.account {
+  width: 100%;
+}
+.account p {
+  font-size: 12px;
+}
+.account a {
+  text-decoration: none;
+  color: #03a9cd;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+/* Media Queries Home Page */
+@media screen and (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+  .home-section__left .logo h3 {
+    display: none;
+  }
+  .home-section__left .logo {
+    margin-left: 20px;
+  }
+  .home-section-text {
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .home-section-text h1 {
+    font-size: 30px;
+  }
+  .home-section-text p {
+    font-size: 18px;
+  }
+  .home-section__left,
+  .home-section__right {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .home-section__left {
+    height: 30%;
+    padding-left: 0;
+  }
+  .home-section__right {
+    background-image: none;
+  }
+  .home-section-form {
+    max-width: 90%;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Section Home Register */
+.sign-up {
+  display: none;
+}
+.sign-up.is-showed {
+  display: block;
+}
+
+.form-control .file {
+  margin-bottom: 10px;
+  border: none;
+  padding-left: 0;
+}
+#file {
+  padding-left: 0;
+}
+.loginMessage {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+/* Section Bacheca */
+.bacheca {
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.header-bacheca {
+  background-color: #03a9cd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.bacheca_image__profile {
+  display: flex;
+  align-items: center;
+}
+.bacheca_image__profile .saluto {
+  color: white;
+  font-weight: 600;
+}
+.logOut-bacheca {
+  cursor: pointer;
+}
+.bacheca_image__profile img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.bacheca_image__profile h4 {
+  font-weight: 300;
+}
+.bacheca_image__profile span {
+  font-weight: 700;
+  color: white;
+}
+.logOut-bacheca img {
+  width: 20px;
+  height: 20px;
+}
+
+.main-bacheca__title {
+  margin: 20px 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-bacheca__title h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.main-bacheca {
+  border-bottom: 1.4px solid #03a9cd;
+}
+
+.main-bacheca__title img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Form Bacheca */
+.close-form {
+  height: 0px;
+  overflow: hidden;
+}
+#add-form {
+  padding: 20px;
+  background-color: #eee;
+  display: flex;
+  justify-content: flex-start;
+}
+#add-form input,
+button {
+  margin-right: 10px;
+  padding: 5px 15px;
+}
+#add-form input::placeholder {
+  color: #ddd;
+  font-weight: 600;
+}
+#add-form input:focus {
+  outline: none;
+}
+
+#add-form button {
+  background-color: #03a9cd;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 10px;
+  border: none;
+}
+
+/* Bacheca Section Cards */
+.section-bacheca-cards {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  height: 100vh;
+}
+.section-bacheca__card {
+  width: 268px;
+  position: relative;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.section-bacheca__card img {
+  width: 100%;
+  height: 100%;
+}
+
+.deleteIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 30;
+  width: 12px !important;
+  height: auto !important;
+  color: white !important;
+}
+.section-bacheca__card h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .section-bacheca__card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #add-form {
+    flex-direction: column;
+  }
+  #add-form input {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+  }
+  #add-form button {
+    font-size: inherit;
+  }
+  .bacheca-input {
+    margin-bottom: 10px;
+  }
+  .add-bacheca {
+    padding: 15px 10px;
+  }
+  .main-bacheca__title h3 {
+    font-size: 16px;
+  }
+  #singlebacheca {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 50;
+    height: 100%;
+    width: 100%;
+    
+  }
+  .singlebacheca__content {
+    flex-direction: column;
+  }
+
+  #smallSingleToDoCard {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .singlebacheca_content_todos {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .singlebacheca_content_todos > div {
+    width: 100%;
+    background-color: #eee;
+  }
+}
+.deleteXIcon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 12px;
+  height: auto;
+  color: white;
+}
+.successMessage {
+  color: green;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Single Bacheca */
+#smallSingleToDoCard {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#singlebacheca {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in;
+  transform: translateX(-100%);
+  overflow: hidden;
+}
+
+.returnToBacheche {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  background-color: #03a9cd;
+}
+.returnToBacheche p {
+  font-size: 12px;
+}
+.returnToBacheche img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.singlebacheca__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+.singlebacheca_content_todos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.addtodo-input {
+  width: 100%;
+}
+#todo input {
+  padding: 10px 15px;
+}
+#todo button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  width: 100%;
+  display: block;
+}
+.singlebacheca__title {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
+.singlebacheca_content_todos > div {
+  width: 100%;
+  max-width: 250px;
+  margin: 10px;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+}
+
+.singlebacheca__title h3 {
+  margin-bottom: 20px;
+}
+
+.singlebacheca__title button {
+  background-color: #03a9cd;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+}
+
+.todo {
+  padding: 0 10px 10px 10px;
+  margin-left: 30px;
+  border-radius: 5px;
+  position: relative;
+}
+
+#addtoDo input {
+  margin: 5px 0;
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+#addtoDo input:focus {
+  border: 0;
+}

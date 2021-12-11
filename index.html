@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Brunello</title>
+  </head>
+  <body>
+    <!-- Home Page -->
+    <section class="home" id="home">
+      <!-- Section Home Left -->
+      <div class="home-section__left">
+        <div class="logo">
+          <img src="./images/checklist.svg" alt="" />
+          <h3>Bru<span>Nello</span></h3>
+        </div>
+        <div class="home-section-text">
+          <h1>Organizza il tuo tempo</h1>
+          <p>
+            Crea le tue fantastiche <span>toDo</span> list e tieni <br />
+            a mente i tuoi impegni
+          </p>
+        </div>
+      </div>
+      <!-- Section Home Right  Accedi Form-->
+      <div class="home-section__right">
+        <!-- Form Accedi -->
+        <div class="home-section-form sign-in">
+          <form action="" id="form" class="form-login">
+            <div class="form-control">
+              <label for="name-input">Email</label>
+              <input
+                type="email"
+                placeholder="Your Email here..."
+                class="nameEmail-input"
+                autocomplete="current-password"
+              />
+            </div>
+
+            <div class="form-control">
+              <img src="./images/001-hidden.png" alt="" />
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="Your password here..."
+                class="password-input"
+                autocomplete="current-password"
+              />
+            </div>
+            <div class="form-control">
+              <button class="btn-login" type="submit">Sign In</button>
+            </div>
+            <div class="account">
+              <p>
+                Non hai un accout ?<a href="" class="registrati">Registrati</a>
+              </p>
+            </div>
+            <p class="loginMessage"></p>
+          </form>
+        </div>
+        <!-- Form Registrati -->
+        <div class="home-section-form sign-up">
+          <form action="" id="register-form" class="form-login">
+            <div class="form-control">
+              <label for="name-input-label-">Name</label>
+              <input
+                type="text"
+                placeholder="Your name here..."
+                class="name-input1"
+              />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                placeholder="Your email here..."
+                class="email-input"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-control">
+              <img src="./images/001-hidden.png" alt="" />
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="Your password here..."
+                class="password-input2"
+                autocomplete="current-password"
+              />
+            </div>
+            <div class="form-control">
+              <button class="btn-login2">Sign Up</button>
+            </div>
+            <p class="error"></p>
+            <div class="account">
+              <p>Hai già un account?<a href="" class="accedi">Accedi</a></p>
+            </div>
+            <p class="errorMessage"></p>
+            <span class="successMessage"></span>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Home page End -->
+    <!-- Bacheca section -->
+    <section class="bacheca">
+      <header class="header-bacheca">
+        <div class="bacheca_image__profile">
+          <img
+            src="https://mpng.subpng.com/20180224/uxe/kisspng-avatar-clip-art-blue-avatar-icon-5a91720f768551.3259122115194813594855.jpg"
+            alt=""
+            id="photoUser"
+          />
+          <h4>ciao <span class="saluto">Giulia</span></h4>
+        </div>
+        <div class="logOut-bacheca">
+          <img class="logoff" src="./images/log-out.svg" alt="" />
+        </div>
+      </header>
+      <div class="main-bacheca">
+        <div class="main-bacheca__title">
+          <h3>Le tue Bacheche</h3>
+          <img class="add-new-bacheca" src="./images/addIcon.svg" alt="" />
+        </div>
+        <div class="close-form">
+          <form id="add-form">
+            <input
+              type="text"
+              class="bacheca-input"
+              placeholder="Nome Bacheca"
+            />
+            <button class="add-bacheca">Aggiungi Bacheca</button>
+          </form>
+        </div>
+      </div>
+      <!-- Bacheca Section Cards -->
+      <div class="section-bacheca-cards">
+
+        <!-- Single bacheca -->
+      </div>
+    </section>
+
+
+    <!-- Single Bacheca Cliccata -->
+    <section id="singlebacheca">
+      <div class="returnToBacheche">
+        <p>Return to Bacheche</p>
+        <img class="returnTo" src="./images/return.png" alt="" />
+      </div>
+      <div class="singlebacheca__content">
+        <div class="singlebacheca__title">
+          <h3>Titolo Bacheca Cliccata</h3>
+          <form id="todo">
+            <input class="addtodo-input" placeholder="Type your todos" />
+            <button class="addtodo">Add new ToDo</button>
+          </form>
+        </div>
+        <!-- Single Todo Card -->
+        <div class="singlebacheca_content_todos"></div>
+      </div>
+    </section>
+
+    <!-- JS Script -->
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
