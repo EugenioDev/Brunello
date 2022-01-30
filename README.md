@@ -1,7 +1,7 @@
 # Brunello
 A nice clone of Trello
 
-### Obiettivo proggetto: 
+### Obiettivo progetto: 
 Realizzare una simpatica to do app revisitando TRELLO che permette all'utente di creare varie bacheche,dove per ogni bacheca si possono creare varie tasklist
 e dentro ogni tasklist i singoli toDo
 
